@@ -19,12 +19,12 @@
         background-color: skyblue;
     }
 
-    .payment {
+    .container {
         position: relative;
         margin: 100px 100px;
     }
 
-    .pay-password {
+    .password {
         display: block;
     }
 
@@ -57,7 +57,7 @@
         border-left: 0 none
     }
 
-    .pay-input {
+    .input {
         position: absolute;
         top: 0;
         left: -100%;
@@ -70,8 +70,8 @@
 </head>
 
 <body>
-    <div class="payment">
-        <div class="pay-password">
+    <div class="container">
+        <div class="password">
             <ul>
                 <li></li>
                 <li></li>
@@ -81,14 +81,14 @@
                 <li></li>
             </ul>
         </div>
-        <input class="pay-input" type="tel" maxlength="6" pattern="[0-9]*" value="" id="pay-input-m">
-        <label for="pay-input-m" class="_focus_hack"></label>
+        <input class="input" type="tel" maxlength="6" id="input">
+        <label for="input"></label>
     </div>
-    <script src="./zepto.min.js"></script>
+    <script src="./zepto.js"></script>
     <script>
-    $('body').on('input', '.pay-input', function() {
+    $('body').on('input', '.input', function() {
         var $this = $(this),
-            $inputs = $this.parent().find('.pay-password li'),
+            $inputs = $this.parent().find('.password li'),
             password = $this.val() + '';
         var numLen = 6;
         for (var i = 0; i < numLen; i++) {
