@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>优化默认密码框</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scaleable=0" />
     <style>
     * {
         margin: 0;
@@ -12,6 +13,7 @@
 
     html {
         height: 100%;
+        font-size: 16px;
     }
 
     body {
@@ -29,26 +31,28 @@
     }
 
     ul {
+        display: inline-block;
         border: 1px solid #fff;
         margin: 0 auto;
         font-size: 0;
-        display: inline-block;
         position: relative;
-        height: 35px;
+        width: 12rem;
+        height: 2rem;
         left: 50%;
         transform: translateX(-50%);
     }
 
     li {
         display: inline-block;
-        width: 35px;
-        height: 35px;
+        width: 2rem;
+        height: 2rem;
         background-color: #fff;
-        font-size: 20px;
+        font-size: 1.2rem;
         font-weight: 700;
         text-align: center;
-        line-height: 35px;
+        line-height: 2rem;
         border-left: 1px solid #e6e6e6;
+        box-sizing: border-box;
         vertical-align: middle;
         overflow: hidden;
     }
